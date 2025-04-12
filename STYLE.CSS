@@ -1,0 +1,80 @@
+/* Body and overall page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensures the body takes full height of the viewport */
+  }
+  
+  /* Center the main CV container */
+  .cv-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px auto;
+    text-align: center; /* Center-aligns all text inside the CV container */
+  }
+  
+  /* Center headings and color them blue */
+  h1, h2, h3 {
+    color: #1a73e8;
+  }
+  
+  /* Profile picture styling */
+  .picture-section img {
+    display: block;
+    margin: 0 auto 15px;
+    width: 150px;
+    border-radius: 50%;
+  }
+  
+  /* Section spacing and colored backgrounds */
+  section {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Unique section background colors */
+  section:nth-of-type(1) { background-color: #e3f2fd; }  /* Picture */
+  section:nth-of-type(2) { background-color: #e1f5fe; }  /* Professional Summary */
+  section:nth-of-type(3) { background-color: #f1f8e9; }  /* Skills */
+  section:nth-of-type(4) { background-color: #fff9c4; }  /* Work Experience */
+  section:nth-of-type(5) { background-color: #fce4ec; }  /* Education */
+  section:nth-of-type(6) { background-color: #ede7f6; }  /* Leadership */
+  section:nth-of-type(7) { background-color: #e0f7fa; }  /* Projects */
+  
+  /* List styling */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Center-align the list items */
+  }
+  ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  
+  /* Links styling */
+  a {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer styling */
+  footer {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 30px;
+  }
+  

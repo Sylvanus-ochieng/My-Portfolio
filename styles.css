@@ -1,85 +1,144 @@
+/* Reset and Base Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    transition: background 0.5s, color 0.5s;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
+/* Header */
 header {
-    background-color: #222;
-    color: white;
-    padding: 20px;
-    font-size: 24px;
+  background: #1a73e8;
+  color: white;
+  padding: 20px;
 }
 
-.profile {
-    margin: 20px 0;
+header h1 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
 }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #333;
+header p {
+  font-size: 1.2em;
 }
 
-.projects {
-    margin: 20px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.project-container {
+nav ul {
+  display: flex; /* Ensure links are displayed in a straight line */
+  list-style-type: none;
+  padding-left: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger-menu {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+nav ul.active {
+  display: block;
+}
+
+nav ul {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: flex; /* Always display links horizontally */
+    flex-direction: row; /* Horizontal direction on mobile too */
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  nav ul.active {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
 }
 
-.project-card {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 200px;
-    transition: transform 0.3s;
+/* Section Styling */
+section {
+  padding: 40px 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.project-card img {
-    width: 100%;
-    border-radius: 5px;
+h2 {
+  color: #1a73e8;
+  margin-bottom: 20px;
 }
 
-.project-card:hover {
-    transform: scale(1.05);
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-button {
-    margin: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
+ul li {
+  margin-bottom: 10px;
 }
 
-button:hover {
-    background: #555;
+/* Footer */
+footer {
+  padding: 20px;
+  font-size: 0.9em;
+  color: #666;
 }
 
-/* Dark Mode */
-.dark-mode {
-    background-color: #333;
-    color: white;
+/* Make sure the footer is at the bottom */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1a73e8;
+  color: white;
+  text-align: center;
 }
 
-.dark-mode header {
-    background-color: black;
-}
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6em;
+  }
 
-.dark-mode .project-card {
-    background: #444;
-    color: white;
+  section {
+    margin: 15px 10px;
+  }
 }

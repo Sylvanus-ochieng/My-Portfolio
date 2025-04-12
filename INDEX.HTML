@@ -1,45 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sylvanus Ochieng | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="page-container">
     <header>
-        <h1>Welcome to My Portfolio</h1>
+      <h1>Sylvanus Ochieng Otieno</h1>
+      <p>Data Analyst | Nairobi, Kenya</p>
+
+      <!-- Navbar -->
+      <nav>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+          &#9776;
+        </div>
+        <ul id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="profile">
-        <img src="Images/picture1.jpeg" alt="My Photo" class="profile-pic">
-        <h2>Sylvanus Ochieng</h2>
-        <p>Hi! I'm a passionate data analyst. Here is one of the projects I'm working on with my colleague.</p>
-    </section>
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I'm a passionate and detail-oriented aspiring data analyst. I love working with data to derive insights and solve real-world problems. My toolkit includes Python, SQL, Power BI, and Excel.
+        </p>
+      </section>
 
-    <section class="projects">
-        <h2>My Projects</h2>
-        <div class="project-container">
-            <div class="project-card">
-                <img src="Images/project1.jpeg" alt="Project 1">
-                <h3>Data Visualization Dashboard</h3>
-                <p>Built an interactive dashboard using Python, Pandas, and Power BI for real-time data insights.</p>
-            </div>
-            <div class="project-card">
-                <img src="Images/project2.jpeg" alt="Project 2">
-                <h3>Machine Learning Model</h3>
-                <p>Developed a predictive model to analyze customer trends using Scikit-Learn.</p>
-            </div>
-            <div class="project-card">
-                <img src="Images/project3.jpg" alt="Project 3">
-                <h3>Web Scraping Tool</h3>
-                <p>Automated web scraping with BeautifulSoup and Selenium to collect market data.</p>
-            </div>
-        </div>
-    </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Data Visualization Dashboard:</strong> Created an interactive dashboard using Power BI and Pandas.</li>
+          <li><strong>Student Performance Analysis:</strong> Analyzed academic data using Python and Excel to identify trends.</li>
+        </ul>
+      </section>
 
-    <button id="toggleDarkMode">Toggle Dark Mode</button>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:sylvanusotieno1@gmail.com">sylvanusotieno1@gmail.com</a></p>
+        <p>Phone: <a href="tel:+254799997183">+254 7999 97183</a></p>
+        <p>GitHub: <a href="https://github.com/sylvanus-ochieng" target="_blank">sylvanus-ochieng</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/sylvanus" target="_blank">linkedin.com/in/sylvanus</a></p>
+      </section>
+    </main>
 
-    <script src="script.js"></script>
+    <footer>
+      &copy; 2025 Sylvanus Ochieng. All rights reserved.
+    </footer>
+  </div>
+
+  <!-- JavaScript to toggle the menu -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
