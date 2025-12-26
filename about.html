@@ -1,90 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Sylvanus Otieno</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Sylvanus Otieno</title>
 
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ===== GENERAL STYLES ===== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+      text-align: center;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+      color: #004080;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 10px auto;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about-section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .profile-image-container {
+      margin-bottom: 20px;
+    }
+
+    .circle-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ddd;
+      display: block;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* ===== CV BUTTONS ===== */
+    .cv-link {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      background-color: #004080;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .cv-link:hover {
+      background-color: #0066cc;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #004080;
+      color: white;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .about-section {
+        padding: 20px 10px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 8px 0;
+      }
+    }
+  </style>
 </head>
 
-<body class="about">
+<body>
 
   <!-- ===== HEADER ===== -->
-  <header class="site-header">
-    <div class="header-content">
-      <h1>About Me</h1>
-
-     <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="skills.html">Skills</a>
-  <a href="work.html">Work</a> <!-- Professional Experience -->
-  <a href="projects.html">Projects</a>
-  <a href="leadership.html">Leadership</a>
-  <a href="certifications.html">Certification</a>
-  <a href="charity.html">Charity</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <header>
+    <h1>Sylvanus Otieno</h1>
+    <nav>
+       <a href="index.html">Home</a> |
+      <a href="About.html">About</a> |
+      <a href="Skills.html">Skills</a>|
+      <a href="Charity.html">Charity</a>|
+      <a href="contact.html">Contacts</a>|
+      <a href="projects.html">Projects</a>|
+      <a href="Leadership.html">Leadership</a>|
+      <a href="Certifications.html">Certification</a>|
+    </nav>
   </header>
 
   <!-- ===== MAIN CONTENT ===== -->
   <main>
-
     <section class="about-section">
 
-      <div class="about-grid">
-
-        <!-- Profile Image -->
-        <div class="about-image">
-          <img src="images/about/profile.jpg" alt="Sylvanus Otieno" />
-        </div>
-
-        <!-- About Content -->
-        <div class="about-content">
-          <h2>Sylvanus Otieno</h2>
-
-          <p>
-            I am a results-driven <strong>Data Analyst</strong> currently working at
-            <strong>Secom World</strong>, where I apply data analysis techniques to
-            support business operations and informed decision-making.
-          </p>
-
-          <p>
-            In my current role, I work closely with <strong>business metrics</strong>
-            including sales performance, customer behavior, product movement, and
-            operational efficiency. I analyze data to identify trends, monitor
-            performance, and provide insights that help improve strategy and overall
-            business outcomes.
-          </p>
-
-          <p>
-            I regularly use tools such as <strong>Excel, SQL, Python, R, and Power BI</strong>
-            for data cleaning, analysis, visualization, and reporting. My focus is on
-            translating data into clear, practical insights that are easily understood
-            by both technical and non-technical stakeholders.
-          </p>
-
-          <p>
-            Through hands-on experience at Secom World, I continue to strengthen my
-            understanding of data-driven business processes, performance measurement,
-            and analytical problem-solving within a real-world commercial environment.
-          </p>
-
-          <a href="assets/sylvanus-cv.pdf" class="btn primary" download>
-            Download My Resume
-          </a>
-        </div>
-
+      <!-- Profile Image -->
+      <div class="profile-image-container">
+        <img src="images/about/profile.jpg" alt="Sylvanus Otieno" class="circle-img">
       </div>
 
-    </section>
+      <h2>About Me</h2>
 
+      <p>
+        I am a passionate <strong>Data Analyst</strong> currently working at
+        <strong>Secom World</strong>, learning business metrics and turning data
+        into actionable insights. I specialize in Excel, SQL, Python, and R to
+        track performance and provide meaningful insights.
+      </p>
+
+      <p>
+        I enjoy analyzing both structured and unstructured data, building dashboards,
+        and communicating insights clearly to support smart decisions.
+      </p>
+
+      <a href="assets/sylvanus-Resume.pdf" download class="cv-link">Download My Resume</a>
+      <a href="assets/sylvanus-CV.pdf" download class="cv-link">Download My CV</a>
+
+    </section>
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
+  <footer>
     <p>&copy; 2025 Sylvanus Otieno. All rights reserved.</p>
   </footer>
 

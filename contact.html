@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #005fa3;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .contact-section {
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .contact-section button {
+      padding: 10px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .contact-section button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body class="contact">
+
+  <!-- Header -->
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="skills.html">Skills</a> |
+      <a href="charity.html">Charity</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="projects.html">Projects</a> |
+      <a href="leadership.html">Leadership</a> |
+      <a href="certifications.html">Certification</a>
+    </nav>
+  </header>
+
+  <!-- Profile Picture (optional) -->
+  <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic">
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Get In Touch</h2>
+    <p>If you'd like to collaborate, ask a question, or just say hello — feel free to contact me!</p>
+    
+    <form action="https://formspree.io/f/xwpqbaee" method="POST">
+      <p id="success-message" style="display:none; color: green;">
+        Thanks! Your message has been sent. I will respond at the earliest convenience.
+      </p>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <h3>Other Ways to Reach Me</h3>
+    <ul>
+      <li><strong>Phone:</strong> <a href="tel:+254799997183">0799997183</a></li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/Sylvanus-ochieng" target="_blank">Sylvanus-ochieng</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sylvanus-otieno-46abab299/" target="_blank">LinkedIn Profile</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 All rights reserved.</p>
+    <p>Professor Sylvanus Ochieng.</p>
+  </footer>
+
+  <script>
+    const form = document.querySelector("form");
+    const successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      }).then(response => {
+        if (response.ok) {
+          successMessage.style.display = "block";
+          form.reset();
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      }).catch(() => {
+        alert("Network error. Please try again.");
+      });
+    });
+  </script>
+
+</body>
+</html>

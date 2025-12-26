@@ -2,78 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects | Sylvanus Otieno</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Projects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #005fa3;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .certification-section {
+      padding: 20px;
+      text-align: center;
+    }
+    .cert-images img {
+      margin: 10px;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="projects">
-
-  <!-- ===== HEADER ===== -->
-  <header class="site-header">
-    <div class="header-content">
-      <h1>Highlighted Projects</h1>
-      <nav class="main-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="skills.html">Skills</a>
-  <a href="work.html">Work</a> <!-- Professional Experience -->
-  <a href="projects.html">Projects</a>
-  <a href="leadership.html">Leadership</a>
-  <a href="certifications.html">Certification</a>
-  <a href="charity.html">Charity</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-    </div>
+<body>
+  <header>
+    <h1>My Projects</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="About.html">About</a> |
+      <a href="Skills.html">Skills</a>|
+      <a href="Charity.html">Charity</a>|
+      <a href="contact.html">Contacts</a>|
+      <a href="projects.html">Projects</a>|
+      <a href="Leadership.html">Leadership</a>|
+      <a href="Certifications.html">Certification</a> |
+     
+    </nav>
   </header>
 
-  <!-- ===== MAIN CONTENT ===== -->
-  <main>
-    <section class="projects-section">
+  <section class="projects-grid">
+    <div class="project-card">
+      <img src="images/Data_Analysis/Project1.png" alt="Project 1">
+      <h3>Sales Dashboard</h3>
+      <p>Interactive dashboard built using Excel and Power BI for retail sales insights.</p>
+      <a href="https://github.com/Sylvanus-ochieng/Data-Analysis-Data-Cleaning-Manipulation-Visualization-and-Interpretation..git" target="_blank">View on GitHub</a>
+    </div>
 
-      <div class="project">
-        <h2>E-commerce Data Dashboard</h2>
-        <p>
-          Developed an interactive dashboard using Power BI to visualize online sales trends, track customer behavior, and optimize inventory and marketing strategies.
-        </p>
-        <p><strong>Tools & Technologies:</strong> Power BI, Excel, SQL</p>
-        <a href="https://github.com/Sylvanus-ochieng/ecommerce-dashboard" target="_blank">View on GitHub</a>
+     <div class="project-card">
+      <img src="images/Performance_Tracker/Project1.png" alt="Project 1">
+        <h3>Employee Attendance Tracker</h3>
+        <p>Transformed unorganized Excel data into a fully interactive progress tracker. Applied conditional formatting, formulas, and charts to visualize attendance and performance statistics effectively.</p>
+        <a href="https://github.com/Sylvanus-ochieng/Data-Analysis-Data-Cleaning-Manipulation-Visualization-and-Interpretation.git" target="_blank">View on GitHub</a>
       </div>
 
-      <div class="project">
-        <h2>Employee Attendance Tracker</h2>
-        <p>
-          Transformed unstructured Excel data into a dynamic progress tracker. Applied advanced formulas, conditional formatting, and charts to monitor attendance and performance efficiently.
-        </p>
-        <p><strong>Tools & Technologies:</strong> Excel, Python</p>
-        <a href="https://github.com/Sylvanus-ochieng/Data-Analysis-Data-Cleaning-Manipulation-Visualization-and-Interpretation" target="_blank">View on GitHub</a>
+    <div class="project-card">
+      <img src="images/covid-19 images/project3.png" alt="Project 3">
+      <h3>Covid-19 Data Analysis</h3>
+      <p>Analyzed WHO Covid data using R and created visualizations with ggplot2.</p>
+      <a href="https://github.com/Sylvanus-ochieng/COVID-19-Global-Data-Tracker.git" target="_blank">View on GitHub</a>
+    </div>
+
+     <div class="project-card">
+      <img src="images/My_Portfolio/project1.png" alt="Project 1">
+        <h3>General Data Analysis Portfolio</h3>
+        <p>Worked on multiple datasets performing tasks like data cleaning, manipulation, visualization, and interpretation using tools like Excel, Python, and Power BI.</p>
+        <a href="https://rad-boba-e8cca8.netlify.app" target="_blank">Visit netlify</a>
       </div>
-
-      <div class="project">
-        <h2>COVID-19 Global Tracker</h2>
-        <p>
-          Analyzed global COVID-19 data to track daily cases, recoveries, and mortality trends. Cleaned datasets, visualized patterns, and highlighted insights for public health decision-making.
-        </p>
-        <p><strong>Tools & Technologies:</strong> Python (Pandas, Matplotlib), SQL</p>
-        <a href="https://github.com/Sylvanus-ochieng/COVID-19-Global-Data-Tracker" target="_blank">View on GitHub</a>
-      </div>
-
-      <div class="project">
-        <h2>General Data Analysis Portfolio</h2>
-        <p>
-          A comprehensive collection of projects demonstrating data cleaning, manipulation, visualization, and interpretation across diverse datasets, translating raw data into actionable insights.
-        </p>
-        <p><strong>Tools & Technologies:</strong> Python, R, Excel, Power BI, Tableau</p>
-        <a href="https://github.com/Sylvanus-ochieng" target="_blank">Explore More Projects</a>
-      </div>
-
-    </section>
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <p>&copy; 2025 Sylvanus Otieno. All rights reserved.</p>
-  </footer>
-
+  </section>
 </body>
 </html>

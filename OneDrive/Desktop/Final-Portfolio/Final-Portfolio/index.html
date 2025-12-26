@@ -3,8 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Final Portfolio</title>
+  <title>Final Portfolio | Sylvanus Otieno</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ===== HEADER ===== */
+    header.site-header {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    header.site-header h1 {
+      font-size: 2.5rem;
+      color: #f0c040;
+      margin-bottom: 15px;
+    }
+
+    header.site-header nav a {
+      color: #fff;
+      margin: 0 10px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    header.site-header nav a:hover,
+    header.site-header nav a.active {
+      color: #f0c040;
+      text-decoration: underline;
+    }
+
+    /* ===== HERO SECTION ===== */
+    #hero {
+      background-color: #f0f4f8;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    #hero h2 {
+      color: #0077cc;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    #hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 10px auto;
+      color: #333;
+    }
+
+    /* ===== PROJECTS SECTION ===== */
+    #projects {
+      background-color: #e8f0fe;
+      padding: 60px 20px;
+    }
+
+    #projects h2 {
+      color: #1a1a1a;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .project {
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      max-width: 900px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .project h3 {
+      color: #f04a4a;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .project span {
+      display: block;
+      font-weight: bold;
+      color: #0077cc;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: #333;
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+
+    .project a {
+      color: #0077cc;
+      font-weight: bold;
+    }
+
+    .project a:hover {
+      color: #f04a4a;
+      text-decoration: underline;
+    }
+
+    /* ===== FOOTER ===== */
+    footer.site-footer {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body class="home">
 
@@ -12,20 +120,20 @@
   <header class="site-header">
     <h1>Welcome to My Portfolio</h1>
     <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="skills.html">Skills</a>
-  <a href="work.html">Work</a> <!-- Professional Experience -->
-  <a href="projects.html">Projects</a>
-  <a href="leadership.html">Leadership</a>
-  <a href="certifications.html">Certification</a>
-  <a href="charity.html">Charity</a>
-  <a href="contact.html">Contact</a>
-</nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="work.html">Work</a>
+      <a href="projects.html">Projects</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="certifications.html">Certification</a>
+      <a href="charity.html">Charity</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <!-- ===== HERO SECTION ===== -->
-  <section class="hero" style="background-color: #f0f4f8;">
+  <section id="hero">
     <h2>Hello! I’m <strong>Sylvanus Otieno</strong></h2>
     <p>
       I am a passionate data analyst and budding software engineer, specializing in turning raw data into actionable insights.
@@ -37,7 +145,7 @@
   </section>
 
   <!-- ===== PROJECT HIGHLIGHTS ===== -->
-  <section class="projects-section" style="background-color: #e8f0fe;">
+  <section id="projects">
     <h2>Highlighted Projects</h2>
 
     <div class="project">

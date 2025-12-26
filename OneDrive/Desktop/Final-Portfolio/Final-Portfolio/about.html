@@ -4,41 +4,128 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Sylvanus Otieno</title>
-
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ===== HEADER ===== */
+    header.site-header {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    header.site-header h1 {
+      font-size: 2.5rem;
+      color: #f0c040;
+      margin-bottom: 15px;
+    }
+
+    header.site-header nav a {
+      color: #fff;
+      margin: 0 10px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    header.site-header nav a:hover,
+    header.site-header nav a.active {
+      color: #f0c040;
+      text-decoration: underline;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    #about {
+      background-color: #f9f7f6;
+      padding: 60px 20px;
+    }
+
+    #about h2 {
+      color: #0077cc;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about-image img.circle-img {
+      width: 200px;
+      border-radius: 50%;
+      border: 4px solid #0077cc;
+    }
+
+    .about-content {
+      max-width: 600px;
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #f04a4a;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .btn-primary:hover {
+      background-color: #0077cc;
+    }
+
+    /* ===== FOOTER ===== */
+    footer.site-footer {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 
 <body class="about">
 
   <!-- ===== HEADER ===== -->
   <header class="site-header">
-    <div class="header-content">
-      <h1>About Me</h1>
-
-     <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="skills.html">Skills</a>
-  <a href="work.html">Work</a> <!-- Professional Experience -->
-  <a href="projects.html">Projects</a>
-  <a href="leadership.html">Leadership</a>
-  <a href="certifications.html">Certification</a>
-  <a href="charity.html">Charity</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <h1>About Me</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="work.html">Work</a>
+      <a href="projects.html">Projects</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="certifications.html">Certification</a>
+      <a href="charity.html">Charity</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <!-- ===== MAIN CONTENT ===== -->
+  <!-- ===== ABOUT SECTION ===== -->
   <main>
-
-    <section class="about-section">
+    <section id="about" class="about-section">
 
       <div class="about-grid">
 
         <!-- Profile Image -->
         <div class="about-image">
-          <img src="images/about/profile.jpg" alt="Sylvanus Otieno" />
+          <img src="images/about/profile.jpg" alt="Sylvanus Otieno" class="circle-img"/>
         </div>
 
         <!-- About Content -->
@@ -72,15 +159,13 @@
             and analytical problem-solving within a real-world commercial environment.
           </p>
 
-          <a href="assets/sylvanus-cv.pdf" class="btn primary" download>
+          <a href="assets/sylvanus-cv.pdf" class="btn-primary" download>
             Download My Resume
           </a>
         </div>
 
       </div>
-
     </section>
-
   </main>
 
   <!-- ===== FOOTER ===== -->

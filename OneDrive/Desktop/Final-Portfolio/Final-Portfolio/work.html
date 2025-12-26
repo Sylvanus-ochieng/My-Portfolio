@@ -5,27 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work Experience | Sylvanus Otieno</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ===== HEADER ===== */
+    header.site-header {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    header.site-header h1 {
+      color: #f0c040;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    header.site-header nav a {
+      color: #fff;
+      margin: 0 10px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    header.site-header nav a.active,
+    header.site-header nav a:hover {
+      color: #f0c040;
+      text-decoration: underline;
+    }
+
+    /* ===== WORK SECTIONS ===== */
+    .work-section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .job, .job-item {
+      background-color: #e6f7ff;
+      border-radius: 10px;
+      padding: 25px 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .job h2, .job-item h3 {
+      color: #0077cc;
+      margin-bottom: 10px;
+    }
+
+    .job span, .job-item span {
+      font-weight: bold;
+      color: #333;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .job ul, .job-item ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .job ul li, .job-item ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 
 <body class="work">
 
   <!-- ===== HEADER ===== -->
   <header class="site-header">
-    <div class="header-content">
-      <h1>Professional & Technical Experience</h1>
-      <nav class="main-nav">
-       <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="skills.html">Skills</a>
-  <a href="work.html">Work</a> <!-- Professional Experience -->
-  <a href="projects.html">Projects</a>
-  <a href="leadership.html">Leadership</a>
-  <a href="certifications.html">Certification</a>
-  <a href="charity.html">Charity</a>
-  <a href="contact.html">Contact</a>
-</nav>
-    </div>
+    <h1>Professional & Technical Experience</h1>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="work.html" class="active">Work</a>
+      <a href="projects.html">Projects</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="certifications.html">Certification</a>
+      <a href="charity.html">Charity</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <!-- ===== MAIN CONTENT ===== -->
@@ -43,28 +114,40 @@
         </ul>
       </div>
 
+      <!-- COUNTY GOVERNMENT OF BUNGOMA -->
+      <div class="job">
+        <h2>Intern – County Government of Bungoma</h2>
+        <span>2022 – 2023</span>
+        <ul>
+          <li>Assisted in data collection and analysis for local government projects.</li>
+          <li>Prepared reports and presentations on community development initiatives.</li>
+          <li>Supported administrative tasks and coordinated information flow within departments.</li>
+        </ul>
+      </div>
+
+      <!-- SOGUTU HQ TELEKOM -->
+      <div class="job">
+        <h2>Technical Assistant – Sogutu HQ Telekom</h2>
+        <span>2021 – 2022</span>
+        <ul>
+          <li>Maintained and monitored telecommunication systems for optimal performance.</li>
+          <li>Assisted in network troubleshooting and technical issue resolution.</li>
+          <li>Provided support for client inquiries and internal technical documentation.</li>
+        </ul>
+      </div>
+
       <!-- JUMIA MAIN HUB -->
       <div class="job">
         <h2>Network Operations – JUMIA Main Hub</h2>
+        <span>2020 – 2021</span>
         <ul>
           <li><strong>Package Intake & Tracking:</strong> Received and scanned packages into the warehouse system, ensuring accurate inventory management and traceability for all incoming shipments.</li>
         </ul>
       </div>
 
-      <!-- Group & Academic Collaborations -->
+      <!-- Academic & Technical Projects -->
       <div class="job">
-        <h2>Academic & Group Projects</h2>
-        <ul>
-          <li>Collaborated on MERN stack web applications and database design projects.</li>
-          <li>Developed Entity-Relationship Diagrams and implemented SQL & MongoDB databases efficiently.</li>
-          <li>Participated in peer reviews, presentations, and technical discussions to refine project outcomes.</li>
-        </ul>
-      </div>
-
-      <!-- Data Analysis & Technical Experience -->
-      <div class="job">
-        <h2>Data Analysis & Technical Experience</h2>
-
+        <h2>Academic & Technical Projects</h2>
         <div class="job-item">
           <h3>Data Analyst – Portfolio & Academic Projects</h3>
           <span>2023 – Present</span>
@@ -85,7 +168,6 @@
             <li>Deployed functional websites on GitHub Pages and Netlify for live demonstration.</li>
           </ul>
         </div>
-
       </div>
 
     </section>

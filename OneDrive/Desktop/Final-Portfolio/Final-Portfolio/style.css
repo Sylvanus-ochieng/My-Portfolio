@@ -34,6 +34,13 @@ header.site-header h1 {
   margin-bottom: 10px;
 }
 
+header.site-header nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 header.site-header nav a {
   margin: 0 10px;
   font-weight: bold;
@@ -44,7 +51,7 @@ header.site-header nav a.active {
   color: #f0c040;
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO / MAIN SECTIONS ===== */
 .hero {
   background-color: #f0f4f8;
   text-align: center;
@@ -62,7 +69,6 @@ header.site-header nav a.active {
   margin: auto;
 }
 
-/* ===== PROJECT / SKILLS / WORK SECTIONS ===== */
 section {
   padding: 60px 20px;
 }
@@ -84,6 +90,7 @@ section.skills-section, section.projects-section, section.work {
   border-radius: 10px;
 }
 
+/* ===== PROJECTS / SKILLS / WORK CARDS ===== */
 .project, .job, .skill-category {
   background-color: #fff;
   margin: 20px auto;
@@ -93,13 +100,13 @@ section.skills-section, section.projects-section, section.work {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== HEADINGS & SPANS ===== */
-.project h2, .job h3, .skill-category h3 {
+.project h3, .job h3, .skill-category h3 {
   font-size: 1.5rem;
   color: #1a1a1a;
   margin-bottom: 10px;
 }
 
+/* ===== TEXT STYLES ===== */
 span {
   display: block;
   text-align: center;
@@ -109,14 +116,12 @@ span {
   font-size: 1.1rem;
 }
 
-/* ===== PARAGRAPHS ===== */
 p {
   text-align: justify;
   text-indent: 40px;
   margin-bottom: 15px;
 }
 
-/* ===== LISTS ===== */
 ul {
   list-style-type: disc;
   margin-left: 40px;
@@ -133,13 +138,13 @@ ul li {
   padding-top: 20px;
 }
 
-.circle-img {
-  width: 180px;
-  height: 180px;
+.circle-img, .profile-pic {
+  width: 200px; /* consistent size */
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: 30px auto;
+  margin: 20px auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -156,7 +161,7 @@ ul li {
 }
 
 /* ===== FOOTER ===== */
-footer.site-footer {
+footer.site-footer, footer {
   background-color: #1e1e1e;
   color: #fff;
   text-align: center;
@@ -173,6 +178,203 @@ footer.site-footer {
   background-color: #0077cc;
   color: #fff;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #005fa3;
+}
+/* ===== GLOBAL STYLES ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #0077cc;
+}
+
+a:hover {
+  color: #005fa3;
+}
+
+/* ===== HEADER ===== */
+header.site-header {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header.site-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #f0c040; /* standout color for site title */
+}
+
+header.site-header nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+header.site-header nav a {
+  margin: 0 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+header.site-header nav a.active {
+  color: #f0c040;
+}
+
+/* ===== HERO / ABOUT SECTION ===== */
+.hero, #about {
+  background-color: #e0f7fa; /* light teal for About/Hero */
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h2, #about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00796b; /* dark teal for header */
+}
+
+.hero p, #about p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ===== PROJECTS SECTION ===== */
+#projects {
+  background-color: #fff3e0; /* light orange */
+  padding: 60px 20px;
+}
+
+#projects h2 {
+  background-color: #fb8c00; /* deep orange for header */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* ===== SKILLS SECTION ===== */
+#skills {
+  background-color: #e8f5e9; /* light green */
+  padding: 60px 20px;
+}
+
+#skills h2 {
+  background-color: #43a047; /* darker green header */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* ===== WORK / CHARITY SECTION ===== */
+#work, #charity {
+  background-color: #f3e5f5; /* light purple */
+  padding: 60px 20px;
+}
+
+#work h2, #charity h2 {
+  background-color: #8e24aa; /* purple header */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* ===== LEADERSHIP SECTION ===== */
+#leadership {
+  background-color: #fffde7; /* light yellow */
+  padding: 60px 20px;
+}
+
+#leadership h2 {
+  background-color: #fbc02d; /* gold header */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* ===== CERTIFICATIONS SECTION ===== */
+#certifications {
+  background-color: #e1f5fe; /* light blue */
+  padding: 60px 20px;
+}
+
+#certifications h2 {
+  background-color: #0288d1; /* deep blue header */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* ===== CONTACT SECTION ===== */
+#contact, .contact-section {
+  background-color: #fff0f0; /* light red/pink */
+  padding: 60px 20px;
+}
+
+#contact h2, .contact-section h2 {
+  background-color: #d32f2f; /* deep red for header */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* ===== PROJECTS / SKILLS / WORK CARDS ===== */
+.project, .job, .skill-category {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 900px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== PROFILE IMAGE ===== */
+.circle-img, .profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== FOOTER ===== */
+footer.site-footer, footer {
+  background-color: #1e1e1e;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  background-color: #0077cc;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .btn-primary:hover, .btn-secondary:hover {

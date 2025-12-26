@@ -5,31 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Sylvanus Otieno</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ===== HEADER ===== */
+    header.site-header {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    header.site-header h1 {
+      font-size: 2.5rem;
+      color: #f0c040;
+      margin-bottom: 15px;
+    }
+
+    header.site-header nav a {
+      color: #fff;
+      margin: 0 10px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    header.site-header nav a:hover,
+    header.site-header nav a.active {
+      color: #f0c040;
+      text-decoration: underline;
+    }
+
+    /* ===== PROJECTS SECTION ===== */
+    .projects-section {
+      background-color: #eef7f6;
+      padding: 50px 20px;
+    }
+
+    .projects-section h2 {
+      text-align: center;
+      background-color: #0077cc;
+      color: #fff;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    .project {
+      background-color: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .project h2 {
+      color: #0077cc;
+    }
+
+    .project p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #fff;
+      background-color: #0077cc;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .project a:hover {
+      background-color: #005fa3;
+    }
+
+    /* ===== FOOTER ===== */
+    footer.site-footer {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body class="projects">
 
   <!-- ===== HEADER ===== -->
   <header class="site-header">
-    <div class="header-content">
-      <h1>Highlighted Projects</h1>
-      <nav class="main-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="skills.html">Skills</a>
-  <a href="work.html">Work</a> <!-- Professional Experience -->
-  <a href="projects.html">Projects</a>
-  <a href="leadership.html">Leadership</a>
-  <a href="certifications.html">Certification</a>
-  <a href="charity.html">Charity</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-    </div>
+    <h1>Highlighted Projects</h1>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="work.html">Work</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="certifications.html">Certification</a>
+      <a href="charity.html">Charity</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <!-- ===== MAIN CONTENT ===== -->
   <main>
     <section class="projects-section">
+
+      <h2>Highlighted Projects</h2>
 
       <div class="project">
         <h2>E-commerce Data Dashboard</h2>
