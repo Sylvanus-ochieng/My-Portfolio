@@ -3,67 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Skills</title>
+  <title>Skills | Sylvanus Otieno</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #eef3f8;
+      text-align: center; /* Center all text by default */
     }
+
     header {
-      background-color: #007acc;
+      background-color: #004080;
       color: white;
-      padding: 10px 0;
-      text-align: center;
+      padding: 15px 0;
     }
+
+    header h1 {
+      margin: 0;
+    }
+
     nav {
-      background-color: #005fa3;
       display: flex;
       justify-content: center;
-      padding: 10px 0;
+      flex-wrap: wrap;
       gap: 15px;
+      padding: 10px 0;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
+
+    nav a:hover,
+    nav a.active {
+      color: #00bfff;
       text-decoration: underline;
     }
-    .certification-section {
-      padding: 20px;
-      text-align: center;
+
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
     }
-    .cert-images img {
-      margin: 10px;
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+
+    section {
+      background-color: #ffffff;
+      padding: 30px 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      text-align: center; /* Center section content */
     }
-    footer {
-      background-color: #f2f2f2;
-      text-align: center;
-      padding: 15px;
+
+    h2 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #0066cc;
       margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none; /* Remove bullets */
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    ul li {
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      main {
+        padding: 0 10px;
+      }
     }
   </style>
-  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="skills">
+
   <header>
     <h1>Core Skills</h1>
-   <nav>
-      <a href="index.html">Home</a> |
+    <nav>
+      | <a href="index.html">Home</a> |
       <a href="About.html">About</a> |
       <a href="Skills.html">Skills</a>|
       <a href="Charity.html">Charity</a>|
       <a href="contact.html">Contacts</a>|
       <a href="projects.html">Projects</a>|
       <a href="Leadership.html">Leadership</a>|
-      <a href="Certifications.html">Certification</a>
-     
+      <a href="Certifications.html">Certification</a>|
     </nav>
   </header>
 
@@ -77,6 +126,7 @@
         <li>Empathy</li>
         <li>Conflict Resolution</li>
       </ul>
+
       <h3>Intrapersonal Skills</h3>
       <ul>
         <li>Time Management</li>
@@ -91,14 +141,16 @@
       <ul>
         <li>Python, SQL, R</li>
         <li>Power BI, Tableau, Excel</li>
-        <li>Web Development (HTML, CSS, JS)</li>
+        <li>Web Development (HTML, CSS, JavaScript)</li>
         <li>Git & GitHub</li>
       </ul>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Sylvanus Otieno. All rights reserved.</p>
+    <p>Professor Sylvanus Ochieng.</p>
+  </footer>
+
 </body>
 </html>
-<footer>
-  <p>&copy; 2025 All rights reserved.</p>
-  <p>Professor Sylvanus Ochieng.</p>
-</footer>

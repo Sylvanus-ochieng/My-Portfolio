@@ -1,63 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="assets/css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leadership & Membership</title>
+  <title>Leadership & Membership | Sylvanus Otieno</title>
+  <link rel="stylesheet" href="assets/css/style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f1f8e9;
+      text-align: center; /* center everything */
     }
+
     header {
-      background-color: #007acc;
+      background-color: #004080;
       color: white;
-      padding: 10px 0;
-      text-align: center;
+      padding: 15px 0;
     }
+
+    header h1 {
+      margin: 0;
+    }
+
     nav {
-      background-color: #005fa3;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
       padding: 10px 0;
-      gap: 15px;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
+
+    nav a:hover,
+    nav a.active {
+      color: #00bfff;
       text-decoration: underline;
     }
-    .certification-section {
-      padding: 20px;
-      text-align: center;
+
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
     }
-    .cert-images img {
-      margin: 10px;
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+
+    section {
+      background-color: #ffffff;
+      padding: 30px 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      text-align: center; /* center section content */
     }
+
+    section h2 {
+      color: #004080;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: none; /* remove bullets */
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    ul li {
+      margin: 15px 0;
+      font-weight: bold;
+    }
+
+    ul li p {
+      font-weight: normal;
+      margin: 5px 0 0 0; /* remove left indent */
+      line-height: 1.6;
+    }
+
     footer {
-      background-color: #f2f2f2;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
+      background-color: #004080;
+      color: white;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      main {
+        padding: 0 10px;
+      }
     }
   </style>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="leadership">
+
   <header>
     <h1>Leadership & Membership Roles</h1>
-   <nav>
-      <nav>
+    <nav>
       <a href="index.html">Home</a> |
       <a href="About.html">About</a> |
       <a href="Skills.html">Skills</a>|
@@ -65,23 +110,46 @@
       <a href="contact.html">Contacts</a>|
       <a href="projects.html">Projects</a>|
       <a href="Leadership.html">Leadership</a>|
-      <a href="Certifications.html">Certification</a>
-     
+      <a href="Certifications.html">Certification</a>|
     </nav>
   </header>
 
-  <section class="section" id="leadership">
-    <h2>Positions Held</h2>
-    <ul>
-      <li>Member – UNESCO (2023)</li>
-      <li>Member – Environmental club 2023–2025</li>
-      <li>General Manager – 2023–2024</li>
-      <li>Commissioner – IEBC University Elections (Feb 2025)</li>
-      <li>Appeals Committee Member – Feb 2025</li>
-      <li>President – 2024–2025</li>
-    </ul>
-  </section>
-<footer>
-  <p>&copy; 2025 All rights reserved.</p>
-  <p>Professor Sylvanus Ochieng.</p>
-</footer>
+  <main>
+    <section id="leadership">
+      <h2>Positions Held</h2>
+      <ul>
+        <li>
+          Member – UNESCO (2023)
+          <p>Participated in global education initiatives, promoting cultural exchange and community development projects.</p>
+        </li>
+        <li>
+          Member – Environmental Club (2023–2025)
+          <p>Engaged in tree planting campaigns, recycling programs, and awareness drives for environmental sustainability.</p>
+        </li>
+        <li>
+          General Manager – 2023–2024
+          <p>Oversaw daily operations, coordinated team tasks, and ensured project deadlines were met efficiently.</p>
+        </li>
+        <li>
+          Commissioner – IEBC University Elections (Feb 2025)
+          <p>Supervised the election process, maintained integrity of votes, and resolved disputes impartially.</p>
+        </li>
+        <li>
+          Appeals Committee Member – Feb 2025
+          <p>Reviewed election-related appeals, analyzed cases, and recommended fair resolutions.</p>
+        </li>
+        <li>
+          President – 2024–2025
+          <p>Led the student body, organized major events, and represented students in official university forums.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sylvanus Otieno. All rights reserved.</p>
+    <p>Professor Sylvanus Ochieng.</p>
+  </footer>
+
+</body>
+</html>
