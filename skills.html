@@ -37,6 +37,17 @@
       font-weight: bold;
     }
 
+     .circle-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ddd;
+      display: block;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
     nav a:hover,
     nav a.active {
       color: #00bfff;
@@ -105,47 +116,71 @@
   <header>
     <h1>Core Skills</h1>
     <nav>
-      | <a href="index.html">Home</a> |
-      <a href="About.html">About</a> |
-      <a href="Skills.html">Skills</a>|
-      <a href="Charity.html">Charity</a>|
-      <a href="contact.html">Contacts</a>|
-      <a href="projects.html">Projects</a>|
-      <a href="Leadership.html">Leadership</a>|
-      <a href="Certifications.html">Certification</a>|
+  |<a href="index.html">HOME</a>|
+  <a href="about.html">ABOUT</a>|
+  <a href="skills.html">SKILLS</a>|
+  <a href="projects.html">PROJECTS</a>|
+  <a href="work.html">PROFESSIONAL EXPERIENCE</a>|
+  <a href="leadership.html">LEADERSHIP</a>|
+  <a href="certifications.html">CERTIFICATIONS</a>|
+  <a href="charity.html">CHARITY</a>|
+  <a href="contact.html">CONTACTS</a>|
     </nav>
   </header>
 
+  <!-- Profile Image -->
+      <div class="profile-image-container">
+        <img src="assets/images/profile2.jpg" alt="Sylvanus Otieno" class="circle-img">
+      </div>
+
   <main>
-    <section>
-      <h2>Soft Skills</h2>
-      <h3>Interpersonal Skills</h3>
-      <ul>
-        <li>Team Collaboration</li>
-        <li>Communication</li>
-        <li>Empathy</li>
-        <li>Conflict Resolution</li>
-      </ul>
 
-      <h3>Intrapersonal Skills</h3>
-      <ul>
-        <li>Time Management</li>
-        <li>Self-Motivation</li>
-        <li>Adaptability</li>
-        <li>Critical Thinking</li>
-      </ul>
-    </section>
+  <!-- SOFT SKILLS -->
+  <div class="skill-block">
+    <div class="skill-heading soft">
+      Soft Skills
+    </div>
 
-    <section>
-      <h2>Hard Skills</h2>
+    <div class="skill-body">
+      <div class="sub-section">
+        <h3>Interpersonal Skills</h3>
+        <ul>
+          <li>Team Collaboration</li>
+          <li>Communication</li>
+          <li>Empathy</li>
+          <li>Conflict Resolution</li>
+        </ul>
+      </div>
+
+      <div class="sub-section">
+        <h3>Intrapersonal Skills</h3>
+        <ul>
+          <li>Time Management</li>
+          <li>Self-Motivation</li>
+          <li>Adaptability</li>
+          <li>Critical Thinking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- HARD SKILLS -->
+  <div class="skill-block">
+    <div class="skill-heading hard">
+      Hard Skills
+    </div>
+
+    <div class="skill-body">
       <ul>
         <li>Python, SQL, R</li>
         <li>Power BI, Tableau, Excel</li>
         <li>Web Development (HTML, CSS, JavaScript)</li>
         <li>Git & GitHub</li>
       </ul>
-    </section>
-  </main>
+    </div>
+  </div>
+
+</main>
 
   <footer>
     <p>&copy; 2025 Sylvanus Otieno. All rights reserved.</p>

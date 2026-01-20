@@ -56,7 +56,6 @@
       background-color: white;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      text-align: center;
     }
 
     .profile-image-container {
@@ -75,17 +74,17 @@
     }
 
     /* ===== CV BUTTONS ===== */
-    .cv-link {
+    .CV-link {
       display: inline-block;
-      margin: 10px;
+      margin: 12px;
       padding: 12px 25px;
       background-color: #004080;
       color: white;
-      border-radius: 5px;
+      border-radius: 6px;
       font-weight: bold;
     }
 
-    .cv-link:hover {
+    .CV-link:hover {
       background-color: #0066cc;
     }
 
@@ -100,14 +99,11 @@
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .about-section {
-        padding: 20px 10px;
-      }
-
-      nav {
-        flex-direction: column;
+        padding: 20px 15px;
       }
 
       nav a {
+        display: block;
         margin: 8px 0;
       }
     }
@@ -120,42 +116,50 @@
   <header>
     <h1>Sylvanus Otieno</h1>
     <nav>
-       <a href="index.html">Home</a> |
-      <a href="About.html">About</a> |
-      <a href="Skills.html">Skills</a>|
-      <a href="Charity.html">Charity</a>|
-      <a href="contact.html">Contacts</a>|
-      <a href="projects.html">Projects</a>|
-      <a href="Leadership.html">Leadership</a>|
-      <a href="Certifications.html">Certification</a>|
+      |<a href="index.html">HOME</a>|
+      <a href="about.html">ABOUT</a>|
+      <a href="skills.html">SKILLS</a>|
+      <a href="projects.html">PROJECTS</a>|
+      <a href="work.html">PROFESSIONAL EXPERIENCE</a>|
+      <a href="leadership.html">LEADERSHIP</a>|
+      <a href="certifications.html">CERTIFICATIONS</a>|
+      <a href="charity.html">CHARITY</a>|
+      <a href="contact.html">CONTACTS</a>|
     </nav>
   </header>
 
   <!-- ===== MAIN CONTENT ===== -->
   <main>
     <section class="about-section">
+  <h2>About Me</h2>
 
       <!-- Profile Image -->
       <div class="profile-image-container">
-        <img src="images/about/profile.jpg" alt="Sylvanus Otieno" class="circle-img">
+        <img src="assets/images/profile1.png" alt="Sylvanus Otieno" class="circle-img">
       </div>
 
-      <h2>About Me</h2>
-
+      
       <p>
         I am a passionate <strong>Data Analyst</strong> currently working at
-        <strong>Secom World</strong>, learning business metrics and turning data
+        <strong>Secom World Limited</strong>, learning business metrics and turning data
         into actionable insights. I specialize in Excel, SQL, Python, and R to
         track performance and provide meaningful insights.
       </p>
 
       <p>
         I enjoy analyzing both structured and unstructured data, building dashboards,
-        and communicating insights clearly to support smart decisions.
+        and communicating insights clearly to support smart decision-making.
       </p>
 
-      <a href="assets/sylvanus-Resume.pdf" download class="cv-link">Download My Resume</a>
-      <a href="assets/sylvanus-CV.pdf" download class="cv-link">Download My CV</a>
+      <!-- CV / Resume Downloads -->
+      <a href="assets/CV/Resume.pdf" download class="CV-link">
+        📄 Download Resume
+      </a>
+
+      <a href="assets/CV/My CV.pdf" download class="CV-link">
+  📄 Download CV
+</a>
+
 
     </section>
   </main>
