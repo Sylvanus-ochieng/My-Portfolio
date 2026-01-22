@@ -4,97 +4,222 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Projects</title>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+    /* ===== BASE RESET ===== */
+    * {
+      box-sizing: border-box;
     }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f4f8; /* BODY background */
+      color: #333;
+    }
+
+    /* ===== HEADER SECTION ===== */
     header {
       background-color: #007acc;
       color: white;
-      padding: 10px 0;
       text-align: center;
+      padding: 20px 10px;
     }
+
+    header h1 {
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
     nav {
-      background-color: #005fa3;
+      margin-top: 10px;
       display: flex;
       justify-content: center;
-      padding: 10px 0;
-      gap: 15px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      padding: 6px 10px;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
     }
-    .certification-section {
-      padding: 20px;
+
+    /* ===== PAGE TITLE SECTION (DIFFERENT COLOR) ===== */
+    .page-title {
+      background-color: #ffffff;
+      padding: 30px 15px;
       text-align: center;
+      border-bottom: 1px solid #ddd;
     }
-    .cert-images img {
-      margin: 10px;
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+
+    .page-title h2 {
+      margin: 0;
+      color: #007acc;
     }
-    footer {
-      background-color: #f2f2f2;
+
+    .page-title p {
+      max-width: 700px;
+      margin: 10px auto 0;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* ===== PROJECTS SECTION ===== */
+    .projects-section {
+      background-color: #eef1f6; /* DIFFERENT from body */
+      padding: 40px 5%;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    /* ===== PROJECT CARD ===== */
+    .project-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       text-align: center;
-      padding: 15px;
-      margin-top: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* ===== IMAGE STYLING ===== */
+    .project-card img {
+      width: 100%;
+      height: 180px;            /* uniform image size */
+      object-fit: cover;        /* keeps proportions */
+      display: block;
+      background-color: #ddd;
+    }
+
+    /* ===== CONTENT ===== */
+    .project-card h3 {
+      margin: 15px 10px 10px;
+      color: #007acc;
+    }
+
+    .project-card p {
+      padding: 0 15px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin: 15px 0 20px;
+      padding: 8px 16px;
+      background-color: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .project-card a:hover {
+      background-color: #005fa3;
     }
   </style>
-  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+
+  <!-- ===== HEADER ===== -->
   <header>
     <h1>MY PROJECTS</h1>
     <nav>
-   |<a href="index.html">HOME</a>|
-  <a href="about.html">ABOUT</a>|
-  <a href="skills.html">SKILLS</a>|
-  <a href="projects.html">PROJECTS</a>|
-  <a href="work.html">PROFESSIONAL EXPERIENCE</a>|
-  <a href="leadership.html">LEADERSHIP</a>|
-  <a href="certifications.html">CERTIFICATIONS</a>|
-  <a href="charity.html">CHARITY</a>|
-  <a href="contact.html">CONTACTS</a>|
+      <a href="index.html">HOME</a>|
+      <a href="about.html">ABOUT</a>|
+      <a href="skills.html">SKILLS</a>|
+      <a href="projects.html">PROJECTS</a>|
+      <a href="work.html">PROFESSIONAL EXPERIENCE</a>|
+      <a href="leadership.html">LEADERSHIP</a>|
+      <a href="certifications.html">CERTIFICATIONS</a>|
+      <a href="charity.html">CHARITY</a>|
+      <a href="contact.html">CONTACTS</a>
     </nav>
   </header>
 
-  <section class="projects-grid">
-    <div class="project-card">
-      <img src="images/Data_Analysis/Project1.png" alt="Project 1">
-      <h3>Sales Dashboard</h3>
-      <p>Interactive dashboard built using Excel and Power BI for retail sales insights.</p>
-      <a href="https://github.com/Sylvanus-ochieng/Data-Analysis-Data-Cleaning-Manipulation-Visualization-and-Interpretation..git" target="_blank">View on GitHub</a>
-    </div>
-
-     <div class="project-card">
-      <img src="assets/images/performance Tracker.jpeg" alt="Project 1">
-        <h3>Employee Attendance Tracker</h3>
-        <p>Transformed unorganized Excel data into a fully interactive progress tracker. Applied conditional formatting, formulas, and charts to visualize attendance and performance statistics effectively.</p>
-        <a href="https://github.com/Sylvanus-ochieng/Data-Analysis-Data-Cleaning-Manipulation-Visualization-and-Interpretation.git" target="_blank">View on GitHub</a>
-      </div>
-
-    <div class="project-card">
-      <img src="covid-19 images/project3.png" alt="Project 3">
-      <h3>Covid-19 Data Analysis</h3>
-      <p>Analyzed WHO Covid data using R and created visualizations with ggplot2.</p>
-      <a href="https://github.com/Sylvanus-ochieng/COVID-19-Global-Data-Tracker.git" target="_blank">View on GitHub</a>
-    </div>
-
-     <div class="project-card">
-      <img src="assets/images" alt="Project 1">
-        <h3>General Data Analysis Portfolio</h3>
-        <p>Worked on multiple datasets performing tasks like data cleaning, manipulation, visualization, and interpretation using tools like Excel, Python, and Power BI.</p>
-        <a href="https://rad-boba-e8cca8.netlify.app" target="_blank">Visit netlify</a>
-      </div>
+  <!-- ===== PAGE TITLE / EXPLANATION ===== -->
+  <section class="page-title">
+    <h2>Project Portfolio</h2>
+    <p>
+      Below are selected projects demonstrating my experience in data analysis,
+      visualization, and problem-solving. Project images are uniformly styled
+      to maintain consistency, clarity, and a professional presentation across
+      different screen sizes.
+    </p>
   </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects-section">
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <img src="assets/images/Sales dashboard.jpeg" alt="Sales Dashboard">
+        <h3>Sales Dashboard</h3>
+        <p>
+          Interactive retail sales dashboard developed using Excel and Power BI
+          to uncover trends, performance metrics, and insights.
+        </p>
+        <a href="https://github.com/Sylvanus-ochieng/Data-Analysis-Data-Cleaning-Manipulation-Visualization-and-Interpretation..git" target="_blank">
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/images/performance Tracker.jpeg" alt="Attendance Tracker">
+        <h3>Employee Attendance Tracker</h3>
+        <p>
+          Cleaned and transformed raw Excel data into an interactive attendance
+          and performance tracker using formulas, charts, and conditional formatting.
+        </p>
+         <a href="https://github.com/Sylvanus-ochieng/Data-Analysis-Data-Cleaning-Manipulation-Visualization-and-Interpretation..git" target="_blank">
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/images/Cases pic.jpeg" alt="Covid-19 Analysis">
+        <h3>Covid-19 Data Analysis</h3>
+        <p>
+          Analyzed global Covid-19 data using R and created informative visualizations
+          with ggplot2 to communicate trends and impacts.
+        </p>
+        <a href="https://github.com/Sylvanus-ochieng/COVID-19-Global-Data-Tracker.git" target="_blank">
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/images/Portfolio.jpeg" alt="General Data Analysis">
+        <h3>General Data Analysis Portfolio</h3>
+        <p>
+          A collection of projects involving data cleaning, visualization, and
+          interpretation using Excel, Python, Power BI, and other tools.
+        </p>
+        <a href="https://rad-boba-e8cca8.netlify.app" target="_blank">
+          Visit Netlify
+        </a>
+      </div>
+
+    </div>
+  </section>
+
 </body>
 </html>

@@ -1,145 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Skills | Sylvanus Otieno</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #eef3f8;
-      text-align: center; /* Center all text by default */
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills | Sylvanus Otieno</title>
 
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 15px 0;
-    }
+<style>
+/* ===== BASE ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eef3f8;
+  text-align: center;
+}
 
-    header h1 {
-      margin: 0;
-    }
+/* ===== HEADER / TITLE SECTION ===== */
+.page-header {
+  background: linear-gradient(135deg, #4b0082, #9333ea);
+  color: white;
+  padding: 40px 20px 25px;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      padding: 10px 0;
-    }
+.page-header h1 {
+  margin-bottom: 10px;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* ===== NAVIGATION ===== */
+nav {
+  margin-top: 10px;
+}
 
-     .circle-img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #ddd;
-      display: block;
-      margin: 0 auto 20px auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 6px;
+}
 
-    nav a:hover,
-    nav a.active {
-      color: #00bfff;
-      text-decoration: underline;
-    }
+nav a:hover {
+  text-decoration: underline;
+}
 
-    main {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
+/* ===== BODY SECTION ===== */
+.page-body {
+  background-color: #f7f9fc;
+  padding: 50px 20px;
+}
 
-    section {
-      background-color: #ffffff;
-      padding: 30px 20px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      text-align: center; /* Center section content */
-    }
+/* ===== PROFILE IMAGE ===== */
+.circle-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 30px;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
 
-    h2 {
-      color: #004080;
-      margin-bottom: 15px;
-    }
+/* ===== SKILL BLOCK ===== */
+.skill-block {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
 
-    h3 {
-      color: #0066cc;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
+/* ===== SKILL HEADING ===== */
+.skill-heading {
+  padding: 18px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
 
-    ul {
-      list-style-type: none; /* Remove bullets */
-      padding: 0;
-      margin: 0 auto;
-    }
+.skill-heading.soft {
+  background: #2563eb;
+}
 
-    ul li {
-      margin: 5px 0;
-      font-weight: bold;
-    }
+.skill-heading.hard {
+  background: #7c3aed;
+}
 
-    footer {
-      background-color: #004080;
-      color: white;
-      padding: 15px 0;
-      margin-top: 40px;
-    }
+/* ===== SKILL BODY ===== */
+.skill-body {
+  padding: 30px;
+}
 
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 8px;
-      }
+.sub-section {
+  margin-bottom: 25px;
+}
 
-      main {
-        padding: 0 10px;
-      }
-    }
-  </style>
+.sub-section h3 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+/* ===== LISTS ===== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+</style>
 </head>
 
-<body class="skills">
+<body>
 
-  <header>
-    <h1>Core Skills</h1>
-    <nav>
-  |<a href="index.html">HOME</a>|
-  <a href="about.html">ABOUT</a>|
-  <a href="skills.html">SKILLS</a>|
-  <a href="projects.html">PROJECTS</a>|
-  <a href="work.html">PROFESSIONAL EXPERIENCE</a>|
-  <a href="leadership.html">LEADERSHIP</a>|
-  <a href="certifications.html">CERTIFICATIONS</a>|
-  <a href="charity.html">CHARITY</a>|
-  <a href="contact.html">CONTACTS</a>|
-    </nav>
-  </header>
+<!-- ===== HEADER / TITLE + NAV ===== -->
+<section class="page-header">
+  <h1>Core Skills</h1>
 
-  <!-- Profile Image -->
-      <div class="profile-image-container">
-        <img src="assets/images/profile2.jpg" alt="Sylvanus Otieno" class="circle-img">
-      </div>
+  <nav>
+    |<a href="index.html">HOME</a>|
+    <a href="about.html">ABOUT</a>|
+    <a href="skills.html">SKILLS</a>|
+    <a href="projects.html">PROJECTS</a>|
+    <a href="work.html">PROFESSIONAL EXPERIENCE</a>|
+    <a href="leadership.html">LEADERSHIP</a>|
+    <a href="certifications.html">CERTIFICATIONS</a>|
+    <a href="charity.html">CHARITY</a>|
+    <a href="contact.html">CONTACTS</a>|
+  </nav>
+</section>
 
-  <main>
+<!-- ===== BODY CONTENT ===== -->
+<section class="page-body">
+
+  <img src="assets/images/profile2.jpg" alt="Sylvanus Otieno" class="circle-img">
 
   <!-- SOFT SKILLS -->
   <div class="skill-block">
-    <div class="skill-heading soft">
-      Soft Skills
-    </div>
+    <div class="skill-heading soft">Soft Skills</div>
 
     <div class="skill-body">
       <div class="sub-section">
@@ -166,9 +160,7 @@
 
   <!-- HARD SKILLS -->
   <div class="skill-block">
-    <div class="skill-heading hard">
-      Hard Skills
-    </div>
+    <div class="skill-heading hard">Hard Skills</div>
 
     <div class="skill-body">
       <ul>
@@ -180,12 +172,11 @@
     </div>
   </div>
 
-</main>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Sylvanus Otieno. All rights reserved.</p>
-    <p>Professor Sylvanus Ochieng.</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 Sylvanus Otieno. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
