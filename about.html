@@ -13,11 +13,7 @@
       padding: 0;
       background-color: #f0f4f8;
       text-align: center;
-    }
-
-    h1, h2 {
-      margin-bottom: 20px;
-      color: #004080;
+      color: #222;
     }
 
     p {
@@ -48,16 +44,37 @@
       text-decoration: underline;
     }
 
-    /* ===== ABOUT SECTION ===== */
-    .about-section {
-      max-width: 800px;
+    /* ===== MAIN ===== */
+    main {
+      max-width: 900px;
       margin: 40px auto;
-      padding: 40px 20px;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      padding: 0 15px;
     }
 
+    section {
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header {
+      background-color: #007acc;
+      color: white;
+      padding: 18px;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    /* ===== SECTION BODY ===== */
+    .section-body {
+      background-color: #eef6ff;
+      padding: 35px 25px;
+    }
+
+    /* ===== PROFILE IMAGE ===== */
     .profile-image-container {
       margin-bottom: 20px;
     }
@@ -67,7 +84,7 @@
       height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #ddd;
+      border: 4px solid #007acc;
       display: block;
       margin: 0 auto 20px auto;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -98,13 +115,13 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      .about-section {
-        padding: 20px 15px;
-      }
-
       nav a {
         display: block;
         margin: 8px 0;
+      }
+
+      .section-body {
+        padding: 25px 15px;
       }
     }
   </style>
@@ -130,38 +147,50 @@
 
   <!-- ===== MAIN CONTENT ===== -->
   <main>
-    <section class="about-section">
-  <h2>About Me</h2>
 
-      <!-- Profile Image -->
-      <div class="profile-image-container">
-        <img src="assets/images/profile1.png" alt="Sylvanus Otieno" class="circle-img">
+    <section>
+
+      <!-- SECTION HEADER -->
+      <div class="section-header">
+        About Me
       </div>
 
-      
-      <p>
-        I am a passionate <strong>Data Analyst</strong> currently working at
-        <strong>Secom World Limited</strong>, learning business metrics and turning data
-        into actionable insights. I specialize in Excel, SQL, Python, and R to
-        track performance and provide meaningful insights.
-      </p>
+      <!-- SECTION BODY -->
+      <div class="section-body">
 
-      <p>
-        I enjoy analyzing both structured and unstructured data, building dashboards,
-        and communicating insights clearly to support smart decision-making.
-      </p>
+        <!-- Profile Image -->
+        <div class="profile-image-container">
+          <img src="assets/images/profile1.png" alt="Sylvanus Otieno" class="circle-img">
+        </div>
 
-      <!-- CV / Resume Downloads -->
-      <a href="assets/CV/Resume.pdf" download class="CV-link">
-        📄 Download Resume
-      </a>
+        <p>
+          I am a passionate <strong>Data Analyst</strong> currently working at
+          <strong>Secom World Limited</strong>, learning business metrics and turning data
+          into actionable insights.
+        </p>
 
-      <a href="assets/CV/My CV.pdf" download class="CV-link">
-  📄 Download CV
-</a>
+        <p>
+          I specialize in Excel, SQL, Python, and R to track performance, analyze trends,
+          and provide meaningful insights that support informed decision-making.
+        </p>
 
+        <p>
+          I enjoy analyzing both structured and unstructured data, building dashboards,
+          and communicating insights clearly to both technical and non-technical stakeholders.
+        </p>
 
+        <!-- CV / Resume Downloads -->
+        <a href="assets/CV/Resume.pdf" download class="CV-link">
+          📄 Download Resume
+        </a>
+
+        <a href="assets/CV/My CV.pdf" download class="CV-link">
+          📄 Download CV
+        </a>
+
+      </div>
     </section>
+
   </main>
 
   <!-- ===== FOOTER ===== -->

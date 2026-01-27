@@ -14,6 +14,7 @@
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
+      color: #222;
     }
 
     header {
@@ -60,22 +61,26 @@
 
     section {
       margin-bottom: 50px;
+      border-radius: 10px;
+      overflow: hidden;
     }
 
     /* ===== SECTION HEADERS ===== */
     .section-header {
-      background-color: #eef6ff;
-      border-left: 6px solid #007acc;
-      padding: 12px 20px;
-      margin-bottom: 20px;
+      text-align: center;
+      padding: 15px 20px;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
     }
 
-    .section-header h2 {
-      margin: 0;
-      color: #005fa3;
-      text-transform: uppercase;
+    /* ===== SECTION BODIES ===== */
+    .section-body {
+      padding: 20px;
+      border-radius: 0 0 10px 10px;
     }
 
+    /* PROJECT CARDS */
     .project {
       background-color: #ffffff;
       margin-bottom: 20px;
@@ -84,7 +89,7 @@
       border-radius: 8px;
     }
 
-    /* ===== GITHUB BUTTON ===== */
+    /* GITHUB BUTTON */
     .btn-github {
       display: inline-block;
       margin-top: 10px;
@@ -100,6 +105,13 @@
       background-color: #005fa3;
     }
 
+    /* ===== COLORS PER SECTION ===== */
+    #about .section-header { background-color: #007acc; }
+    #about .section-body { background-color: #eef6ff; }
+
+    #projects .section-header { background-color: #d9534f; }
+    #projects .section-body { background-color: #fceaea; }
+
     footer {
       background-color: #f2f2f2;
       text-align: center;
@@ -107,6 +119,7 @@
       margin-top: 30px;
       font-size: 14px;
     }
+
   </style>
 </head>
 
@@ -116,15 +129,15 @@
   <header>
     <h1>Welcome to My Portfolio</h1>
     <nav>
-  |<a href="index.html">HOME</a>|
-  <a href="about.html">ABOUT</a>|
-  <a href="skills.html">SKILLS</a>|
-  <a href="projects.html">PROJECTS</a>|
-  <a href="work.html">PROFESSIONAL EXPERIENCE</a>|
-  <a href="leadership.html">LEADERSHIP</a>|
-  <a href="certifications.html">CERTIFICATIONS</a>|
-  <a href="charity.html">CHARITY</a>|
-  <a href="contact.html">CONTACTS</a>|
+      |<a href="index.html">HOME</a>|
+      <a href="about.html">ABOUT</a>|
+      <a href="skills.html">SKILLS</a>|
+      <a href="projects.html">PROJECTS</a>|
+      <a href="work.html">PROFESSIONAL EXPERIENCE</a>|
+      <a href="leadership.html">LEADERSHIP</a>|
+      <a href="certifications.html">CERTIFICATIONS</a>|
+      <a href="charity.html">CHARITY</a>|
+      <a href="contact.html">CONTACTS</a>|
     </nav>
   </header>
 
@@ -133,89 +146,75 @@
 
     <!-- ABOUT SECTION -->
     <section id="about">
-      <img src="assets/images/profile11.jpg" alt="Profile Picture" class="profile-pic">
-
-      <div class="section-header">
-        <h2>About Me</h2>
+      <div class="section-header">About Me</div>
+      <div class="section-body">
+        <img src="assets/images/profile11.jpg" alt="Profile Picture" class="profile-pic">
+        <p>Hello!</p>
+        <p>I'm <strong>Sylvanus Ochieng Otieno</strong>, a passionate data analyst with a strong background
+          in statistics, computer science, and business intelligence.</p>
+        <p>I specialize in uncovering insights from data and visualization to support informed decision-making using
+          SQL, Python, Excel, and Power BI.</p>
+        <p>I enjoy cleaning messy datasets, building dashboards, and transforming raw data into
+          meaningful stories that drive business impact.</p>
       </div>
-
-      <p>
-        Hello !
-      </p>
-      <p>
-      
-        I'm <strong>Sylvanus Ochieng Otieno</strong>, a passionate data analyst with a strong background
-        in statistics, computer science, and business intelligence.
-      </p>
-      <p>
-        I specialize in uncovering insights from data and visualization to support informed decision-making using
-        SQL, Python, Excel, and Power BI.
-      </p>
-      <p>
-        I enjoy cleaning messy datasets, building dashboards, and transforming raw data into
-        meaningful stories that drive business impact.
-      </p>
     </section>
 
     <!-- PROJECTS SECTION -->
     <section id="projects">
+      <div class="section-header">Projects</div>
+      <div class="section-body">
+        <div class="project">
+          <h3>E-commerce Data Dashboard</h3>
+          <p>
+            Built an interactive Power BI dashboard to analyze online sales trends,
+            customer behavior, and revenue performance.
+          </p>
+          <a href="https://github.com/Sylvanus-ochieng/ecommerce-dashboard"
+             target="_blank"
+             class="btn-github">
+             View on GitHub
+          </a>
+        </div>
 
-      <div class="section-header">
-        <h2>PROJECTS</h2>
+        <div class="project">
+          <h3>Employee Attendance Tracker</h3>
+          <p>
+            Converted raw Excel data into an interactive attendance and performance tracker
+            using formulas, charts, and conditional formatting.
+          </p>
+          <a href="https://github.com/Sylvanus-ochieng/Data-Analysis-Data-Cleaning-Manipulation-Visualization-and-Interpretation.git"
+             target="_blank"
+             class="btn-github">
+             View on GitHub
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>COVID-19 Global Tracker</h3>
+          <p>
+            Analyzed global COVID-19 data using Python (Pandas, Matplotlib) to visualize
+            trends in infections, recoveries, and mortality.
+          </p>
+          <a href="https://github.com/Sylvanus-ochieng/COVID-19-Global-Data-Tracker.git"
+             target="_blank"
+             class="btn-github">
+             View on GitHub
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>General Data Analysis Portfolio</h3>
+          <p>
+            A collection of multiple data analysis projects involving data cleaning,
+            manipulation, visualization, and interpretation.
+          </p>
+          <a href="https://github.com/Sylvanus-ochieng/My-Portfolio.git"
+             target="_blank"
+             class="btn-github">
+             Explore More Projects
+          </a>
+        </div>
       </div>
-
-      <div class="project">
-        <h3>E-commerce Data Dashboard</h3>
-        <p>
-          Built an interactive Power BI dashboard to analyze online sales trends,
-          customer behavior, and revenue performance.
-        </p>
-        <a href="https://github.com/Sylvanus-ochieng/ecommerce-dashboard"
-           target="_blank"
-           class="btn-github">
-           View on GitHub
-        </a>
-      </div>
-
-      <div class="project">
-        <h3>Employee Attendance Tracker</h3>
-        <p>
-          Converted raw Excel data into an interactive attendance and performance tracker
-          using formulas, charts, and conditional formatting.
-        </p>
-        <a href="https://github.com/Sylvanus-ochieng/Data-Analysis-Data-Cleaning-Manipulation-Visualization-and-Interpretation.git"
-           target="_blank"
-           class="btn-github">
-           View on GitHub
-        </a>
-      </div>
-
-      <div class="project">
-        <h3>COVID-19 Global Tracker</h3>
-        <p>
-          Analyzed global COVID-19 data using Python (Pandas, Matplotlib) to visualize
-          trends in infections, recoveries, and mortality.
-        </p>
-        <a href="https://github.com/Sylvanus-ochieng/COVID-19-Global-Data-Tracker.git"
-           target="_blank"
-           class="btn-github">
-           View on GitHub
-        </a>
-      </div>
-
-      <div class="project">
-        <h3>General Data Analysis Portfolio</h3>
-        <p>
-          A collection of multiple data analysis projects involving data cleaning,
-          manipulation, visualization, and interpretation.
-        </p>
-        <a href="https://github.com/Sylvanus-ochieng/My-Portfolio.git"
-           target="_blank"
-           class="btn-github">
-           Explore More Projects
-        </a>
-      </div>
-
     </section>
 
   </main>

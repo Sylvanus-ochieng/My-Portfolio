@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leadership & Membership | Sylvanus Otieno</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f1f8e9;
-      text-align: center; /* center everything */
+      text-align: center;
+      color: #222;
     }
 
     header {
@@ -20,25 +21,11 @@
       padding: 15px 0;
     }
 
-    header h1 {
-      margin: 0;
-    }
-
-     .circle-img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #ddd;
-      display: block;
-      margin: 0 auto 20px auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
       padding: 10px 0;
     }
 
@@ -48,47 +35,64 @@
       font-weight: bold;
     }
 
-    nav a:hover,
-    nav a.active {
-      color: #00bfff;
+    nav a:hover {
       text-decoration: underline;
     }
 
+    .circle-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #004080;
+      display: block;
+      margin: 25px auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
     main {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 15px;
     }
 
-    section {
-      background-color: #ffffff;
-      padding: 30px 20px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      text-align: center; /* center section content */
-    }
-
-    section h2 {
-      color: #004080;
-      margin-bottom: 20px;
-    }
-
-    ul {
-      list-style-type: none; /* remove bullets */
-      padding: 0;
-      margin: 0 auto;
-    }
-
-    ul li {
-      margin: 15px 0;
+    /* ===== CATEGORY HEADER ===== */
+    .category-header {
+      background-color: #007acc;
+      color: white;
+      padding: 18px;
+      margin: 40px 0 25px;
+      border-radius: 10px;
+      font-size: 1.6rem;
       font-weight: bold;
+      text-align: center;
     }
 
-    ul li p {
-      font-weight: normal;
-      margin: 5px 0 0 0; /* remove left indent */
-      line-height: 1.6;
+    /* ===== ROLE TITLE ===== */
+    .role-title {
+      background-color: #e3f2fd;
+      padding: 16px;
+      border-radius: 10px 10px 0 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #004080;
+      text-align: center;
+    }
+
+    /* ===== ROLE BODY ===== */
+    .role-body {
+      background-color: #ffffff;
+      padding: 22px;
+      border-radius: 0 0 10px 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+
+    .role-body p {
+      max-width: 700px;
+      margin: 10px auto;
+      line-height: 1.7;
+      color: #333;
     }
 
     footer {
@@ -102,64 +106,93 @@
       nav {
         flex-direction: column;
       }
-      main {
-        padding: 0 10px;
-      }
     }
   </style>
 </head>
+
 <body class="leadership">
 
+  <!-- HEADER -->
   <header>
     <h1>Leadership & Membership Roles</h1>
     <nav>
-  |<a href="index.html">HOME</a>|
-  <a href="about.html">ABOUT</a>|
-  <a href="skills.html">SKILLS</a>|
-  <a href="projects.html">PROJECTS</a>|
-  <a href="work.html">PROFESSIONAL EXPERIENCE</a>|
-  <a href="leadership.html">LEADERSHIP</a>|
-  <a href="certifications.html">CERTIFICATIONS</a>|
-  <a href="charity.html">CHARITY</a>|
-  <a href="contact.html">CONTACTS</a>|
+      |<a href="index.html">HOME</a>|
+      <a href="about.html">ABOUT</a>|
+      <a href="skills.html">SKILLS</a>|
+      <a href="projects.html">PROJECTS</a>|
+      <a href="work.html">PROFESSIONAL EXPERIENCE</a>|
+      <a href="leadership.html">LEADERSHIP</a>|
+      <a href="certifications.html">CERTIFICATIONS</a>|
+      <a href="charity.html">CHARITY</a>|
+      <a href="contact.html">CONTACTS</a>|
     </nav>
   </header>
-<!-- Profile Image -->
-      <div class="profile-image-container">
-        <img src="assets/images/profile6 (1).jpg" alt="Sylvanus Otieno" class="circle-img">
-      </div>
+
+  <!-- PROFILE IMAGE -->
+  <img src="assets/images/profile6 (1).jpg" alt="Sylvanus Otieno" class="circle-img">
+
   <main>
-    <section id="leadership">
-      <h2>Positions Held</h2>
-      <ul>
-        <li>
-          Member – UNESCO (2023)
-          <p>Participated in global education initiatives, promoting cultural exchange and community development projects.</p>
-        </li>
-        <li>
-          Member – Environmental Club (2023–2025)
-          <p>Engaged in tree planting campaigns, recycling programs, and awareness drives for environmental sustainability.</p>
-        </li>
-        <li>
-          General Manager – 2023–2024
-          <p>Oversaw daily operations, coordinated team tasks, and ensured project deadlines were met efficiently.</p>
-        </li>
-        <li>
-          Commissioner – IEBC University Elections (Feb 2025)
-          <p>Supervised the election process, maintained integrity of votes, and resolved disputes impartially.</p>
-        </li>
-        <li>
-          Appeals Committee Member – Feb 2025
-          <p>Reviewed election-related appeals, analyzed cases, and recommended fair resolutions.</p>
-        </li>
-        <li>
-          President – 2024–2025
-          <p>Led the student body, organized major events, and represented students in official university forums.</p>
-        </li>
-      </ul>
-    </section>
+
+    <!-- ===== MEMBERSHIP ROLES ===== -->
+    <div class="category-header">Membership & Community Involvement</div>
+
+    <div class="role-title">Member – UNESCO (2023)</div>
+    <div class="role-body">
+      <p>
+        Participated in global education and cultural initiatives, contributing to
+        programs focused on community development, inclusivity, and international collaboration.
+      </p>
+    </div>
+
+    <div class="role-title">Member – Environmental Club (2023 – 2025)</div>
+    <div class="role-body">
+      <p>
+        Actively engaged in environmental conservation activities including tree planting,
+        recycling programs, and sustainability awareness campaigns within the university.
+      </p>
+    </div>
+
+    <!-- ===== LEADERSHIP ROLES ===== -->
+    <div class="category-header">Leadership Roles</div>
+
+    <div class="role-title">General Manager (2023 – 2024)</div>
+    <div class="role-body">
+      <p>
+        Oversaw daily operations, coordinated team activities, delegated responsibilities,
+        and ensured smooth execution of projects while meeting deadlines and objectives.
+      </p>
+    </div>
+
+    <div class="role-title">President (2024 – 2025)</div>
+    <div class="role-body">
+      <p>
+        Led the student body, organized major institutional events, represented students
+        in official university forums, and acted as a liaison between students and administration.
+      </p>
+    </div>
+
+    <!-- ===== GOVERNANCE & ELECTORAL ROLES ===== -->
+    <div class="category-header">Governance & Electoral Roles</div>
+
+    <div class="role-title">Commissioner – IEBC University Elections (Feb 2025)</div>
+    <div class="role-body">
+      <p>
+        Supervised the electoral process, ensured transparency and fairness, maintained
+        voting integrity, and handled procedural compliance during the elections.
+      </p>
+    </div>
+
+    <div class="role-title">Appeals Committee Member (Feb 2025)</div>
+    <div class="role-body">
+      <p>
+        Reviewed election-related appeals, analyzed submitted cases objectively, and
+        recommended fair and lawful resolutions in accordance with electoral guidelines.
+      </p>
+    </div>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Sylvanus Otieno. All rights reserved.</p>
     <p>Professor Sylvanus Ochieng.</p>

@@ -1,102 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Certifications</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certifications | Sylvanus Ochieng</title>
 
-    header {
-      background-color: #007BFF;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
+<style>
+:root{
+  --primary:#007BFF;
+  --bg:#f4f6f8;
+  --card:#ffffff;
+  --text:#222;
 
-     .circle-img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #ddd;
-      display: block;
-      margin: 0 auto 20px auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    nav {
-      background-color: #007BFF;
-      padding: 0.8rem;
-      text-align: center;
-    }
+  --all:#f0f0ff;
+  --academic:#e8f1ff;
+  --professional:#e9f8ef;
+  --leadership:#fff3e6;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+body.dark{
+  --bg:#121212;
+  --card:#1e1e1e;
+  --text:#f1f1f1;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:.3s;
+}
 
-    .container {
-      padding: 2rem;
-    }
+header{
+  background:var(--primary);
+  color:#fff;
+  padding:1.4rem;
+  text-align:center;
+}
 
-    .cert-image {
-      margin: 1rem 0;
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+nav{
+  background:#005ecb;
+  padding:.8rem;
+  text-align:center;
+}
+nav a{
+  color:#fff;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.toggle{
+  position:absolute;
+  top:18px;
+  right:18px;
+  border:none;
+  padding:8px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.profile{
+  text-align:center;
+  margin:30px 0;
+}
+.profile img{
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #ddd;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:2rem;
+}
+
+/* CATEGORY TABS */
+.category-tabs{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:30px;
+}
+.category-tabs button{
+  padding:10px 18px;
+  border:none;
+  border-radius:25px;
+  background:#ccc;
+  cursor:pointer;
+  font-weight:bold;
+}
+.category-tabs button.active{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* CONTENT BACKGROUNDS */
+.category-content{
+  padding:30px;
+  border-radius:12px;
+}
+.all-bg{ background:var(--all); }
+.academic-bg{ background:var(--academic); }
+.professional-bg{ background:var(--professional); }
+.leadership-bg{ background:var(--leadership); }
+
+/* GRID & CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+.card{
+  background:var(--card);
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 6px 15px rgba(0,0,0,.15);
+  text-align:center;
+  opacity:0;
+  transform:translateY(30px);
+  transition:.6s;
+}
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+.card img{
+  width:100%;
+  border-radius:6px;
+}
+.card h3{ margin:12px 0; }
+.card button{
+  padding:8px 14px;
+  border:none;
+  border-radius:5px;
+  background:var(--primary);
+  color:#fff;
+  cursor:pointer;
+}
+
+footer{
+  background:#222;
+  color:#ddd;
+  text-align:center;
+  padding:1rem;
+  margin-top:40px;
+}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+.modal-content{
+  background:#fff;
+  padding:15px;
+  max-width:90%;
+  max-height:90%;
+}
+.modal iframe,
+.modal img{
+  width:100%;
+  height:80vh;
+}
+.modal span{
+  float:right;
+  cursor:pointer;
+  font-size:22px;
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>My Certifications</h1>
-  </header>
+<button class="toggle" onclick="toggleDark()">🌙</button>
 
-  <nav>
-     <a href="index.html">HOME</a>|
-     <a href="about.html">ABOUT</a>|
-     <a href="skills.html">SKILLS</a>|
-     <a href="projects.html">PROJECTS</a>|
-     <a href="work.html">PROFESSIONAL EXPERIENCE</a>|
-     <a href="leadership.html">LEADERSHIP</a>|
-     <a href="certifications.html">CERTIFICATIONS</a>|
-     <a href="charity.html">CHARITY</a>|
-     <a href="contact.html">CONTACTS</a>|
-  </nav>
+<header>
+  <h1>My Certifications</h1>
+</header>
 
-  <!-- Profile Image -->
-      <div class="profile-image-container">
-        <img src="assets/images/profile7.jpg" alt="Sylvanus Otieno" class="circle-img">
-      </div>
+<nav>
+  <a href="index.html">HOME</a> |
+  <a href="about.html">ABOUT</a> |
+  <a href="skills.html">SKILLS</a> |
+  <a href="projects.html">PROJECTS</a> |
+  <a href="work.html">EXPERIENCE</a> |
+  <a href="leadership.html">LEADERSHIP</a> |
+  <a href="certifications.html">CERTIFICATIONS</a> |
+  <a href="contact.html">CONTACT</a>
+</nav>
 
-  <div class="container">
-    <img src="assets/images/Leaders of lerning cert.jpeg" alt="Leadership Certificate" class="cert-image" />
-<div class="cert-container">
-
-  <div class="container">
-    <img src="assets/images/Unesco.jpeg" alt="Electoral Commission Certificate" class="cert-image" />
-<div class="cert-container">
-   <a href="assets/images/Unesco.jpeg" target="_blank">View Electoral Commision Certificate (PDF)</a>
-  <a href="images/Certifications/PowerBI_Certificate.pdf" target="_blank">View Power BI Certificate (PDF)</a><br>
-  <a href="images/Certifications/EFSET_Certificate.pdf" target="_blank">View EF SET Certificate (PDF)</a>
+<div class="profile">
+  <img src="assets/images/profile7.jpg" alt="Sylvanus Ochieng">
 </div>
+
+<div class="container">
+
+<!-- CATEGORY SELECTOR -->
+<div class="category-tabs">
+  <button class="active" onclick="showCategory('all', this)">All</button>
+  <button onclick="showCategory('academic', this)">Academic</button>
+  <button onclick="showCategory('professional', this)">Professional</button>
+  <button onclick="showCategory('leadership', this)">Leadership</button>
+</div>
+
+<!-- CONTENT -->
+<div id="content" class="category-content all-bg">
+  <div class="grid">
+
+    <!-- ACADEMIC -->
+    <div class="card academic">
+      <img src="assets/Certificates/Leaders of lerning cert.jpeg">
+      <h3>Leaders of Learning</h3>
+      <button onclick="openModal('assets/Certificates/Leaders of lerning cert.jpeg')">Preview</button>
+    </div>
+
+    <div class="card academic">
+      <h3>Power BI Certificate</h3>
+      <button onclick="openModal('assets/Certificates/PowerBI_Certificate.pdf')">View</button>
+    </div>
+
+    <div class="card academic">
+      <h3>EF SET English Certificate</h3>
+      <button onclick="openModal('assets/Certificates/SYLVANUS ENGLISH EF SET Certificate.pdf')">View</button>
+    </div>
+
+    <div class="card academic">
+      <h3>OLAL / OIAI Certificate</h3>
+      <button onclick="openModal('assets/Certificates/OIAI-Certificate-Sylvanus-Ochieng.pdf')">View</button>
+    </div>
+
+    <!-- PROFESSIONAL -->
+    <div class="card professional">
+      <h3>Certificate of Good Conduct</h3>
+      <button onclick="openModal('assets/Certificates/Certificate Of Good conduct.pdf')">View</button>
+    </div>
+
+    <div class="card professional">
+      <img src="assets/Certificates/County recommendation.jpeg">
+      <h3>County Government of Bungoma Recommendation</h3>
+      <button onclick="openModal('assets/Certificates/County recommendation.jpeg')">Preview</button>
+    </div>
+
+    <!-- ACADEMIC + PROFESSIONAL -->
+    <div class="card academic professional">
+      <h3>Kirinyaga University Recommendation</h3>
+      <button onclick="openModal('assets/Certificates/SCHOOL RECOMMENDATION LETTER.pdf')">View</button>
+    </div>
+
+    <!-- LEADERSHIP -->
+    <div class="card leadership">
+      <img src="assets/Certificates/commision.jpeg">
+      <h3>Electoral Commission Certificate</h3>
+      <button onclick="openModal('assets/Certificates/commision.jpeg')">Preview</button>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Sylvanus Ochieng</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()">✖</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+function toggleDark(){
+  document.body.classList.toggle('dark');
+}
+
+function showCategory(cat, btn){
+  document.querySelectorAll('.category-tabs button')
+    .forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const content=document.getElementById('content');
+  content.className='category-content';
+
+  if(cat==='all') content.classList.add('all-bg');
+  if(cat==='academic') content.classList.add('academic-bg');
+  if(cat==='professional') content.classList.add('professional-bg');
+  if(cat==='leadership') content.classList.add('leadership-bg');
+
+  document.querySelectorAll('.card').forEach(card=>{
+    card.style.display =
+      (cat==='all'||card.classList.contains(cat))?'block':'none';
+  });
+}
+
+function openModal(src){
+  const body=document.getElementById('modal-body');
+  body.innerHTML = src.endsWith('.pdf')
+    ? `<iframe src="${src}"></iframe>`
+    : `<img src="${src}">`;
+  document.getElementById('modal').style.display='flex';
+}
+
+function closeModal(){
+  document.getElementById('modal').style.display='none';
+}
+
+/* scroll animation */
+const cards=document.querySelectorAll('.card');
+window.addEventListener('scroll',()=>{
+  cards.forEach(card=>{
+    if(card.getBoundingClientRect().top < window.innerHeight-60){
+      card.classList.add('show');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
-<footer>
-  <p>&copy; 2025 All rights reserved.</p>
-  <p>Professor Sylvanus Ochieng.</p>
-</footer>
